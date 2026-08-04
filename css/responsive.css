@@ -1,0 +1,109 @@
+/* ==========================================================================
+   8. RESPONSIVE MEDIA QUERIES (MOBILE-FIRST)
+   Breakpoints: 576 / 768 / 992 / 1200 / 1400
+   ========================================================================== */
+
+/* ---- Base (mobile) overrides ---- */
+.nav-links {
+  position: fixed;
+  inset: 64px var(--sp-md) auto var(--sp-md);
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--sp-md);
+  background: var(--color-surface);
+  border: var(--border-w) solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--sp-md);
+  box-shadow: 0 16px 32px var(--color-shadow);
+  transform: translateY(-12px);
+  opacity: 0;
+  visibility: hidden;
+  transition: transform var(--transition-base), opacity var(--transition-base), visibility var(--transition-base);
+}
+
+.nav-links.is-open {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+.menu-toggle { display: flex; }
+
+/* ---- Small Tablet: 576px ---- */
+@media (min-width: 576px) {
+  .form-row.two-up {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero__actions { gap: var(--sp-lg); }
+}
+
+/* ---- Tablet: 768px ---- */
+@media (min-width: 768px) {
+  .menu-toggle { display: none; }
+
+  .nav-links {
+    position: static;
+    flex-direction: row;
+    align-items: center;
+    background: none;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    transform: none;
+    opacity: 1;
+    visibility: visible;
+    inset: auto;
+  }
+
+  .hero {
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+    padding-block: var(--sp-3xl) var(--sp-2xl);
+  }
+
+  .about-grid {
+    grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+  }
+
+  .contact-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.85fr);
+  }
+
+  .footer-grid {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+}
+
+/* ---- Laptop: 992px ---- */
+@media (min-width: 992px) {
+  .skills-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .hero__coords {
+    gap: var(--sp-xl);
+  }
+}
+
+/* ---- Desktop: 1200px ---- */
+@media (min-width: 1200px) {
+  .projects-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .container {
+    padding-inline: var(--sp-lg);
+  }
+}
+
+/* ---- Large Desktop: 1400px ---- */
+@media (min-width: 1400px) {
+  .hero {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.8fr);
+  }
+}
+
+/* Horizontal-overflow guard lives in style.css (overflow-x: clip on html/body)
+   so position: sticky elements like .site-header keep working everywhere. */

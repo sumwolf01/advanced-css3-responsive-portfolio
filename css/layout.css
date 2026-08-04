@@ -1,0 +1,102 @@
+/* ==========================================================================
+   5. LAYOUT (CSS GRID)
+   ========================================================================== */
+
+.site {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
+
+/* ---- Header / nav ---- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: color-mix(in srgb, var(--color-bg) 88%, transparent);
+  backdrop-filter: blur(8px);
+  border-bottom: var(--border-w) solid var(--color-border);
+  transition: var(--transition-theme);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: var(--sp-sm);
+  gap: var(--sp-md);
+}
+
+/* ---- Hero: grid title-block, like a technical drawing header ---- */
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--sp-xl);
+  align-items: center;
+  padding-block: var(--sp-2xl) var(--sp-xl);
+  border-bottom: var(--border-w) solid var(--color-border);
+}
+
+.hero__frame {
+  position: relative;
+  padding: var(--sp-lg);
+}
+
+.hero__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--sp-lg);
+  align-items: center;
+}
+
+/* ---- Section shell ---- */
+.section {
+  padding-block: var(--sp-2xl);
+  border-bottom: var(--border-w) solid var(--color-border);
+}
+
+.section:last-of-type {
+  border-bottom: none;
+}
+
+/* ---- Skills grid ---- */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--sp-md);
+}
+
+/* ---- Projects gallery ---- */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--sp-lg);
+  align-items: stretch;
+}
+
+/* ---- About section: text + specs panel ---- */
+.about-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--sp-xl);
+}
+
+/* ---- Contact section ---- */
+.contact-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--sp-xl);
+}
+
+/* ---- Footer ---- */
+.site-footer {
+  border-top: var(--border-w) solid var(--color-border);
+  padding-block: var(--sp-lg);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--sp-md);
+}

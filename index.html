@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Name — Your Title</title>
+  <meta name="description" content="Portfolio of Your Name. Add a short description of who you are and what you do." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheets: loaded in cascade order -->
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body data-theme="light">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="site">
+    <!-- ============ HEADER / NAV ============ -->
+    <header class="site-header">
+      <div class="container nav">
+        <a href="#top" class="logo" aria-label="Your Name, home">
+          <span class="logo-dot" aria-hidden="true"></span>
+          YOUR.NAME
+        </a>
+
+        <nav aria-label="Primary">
+          <ul class="nav-links" id="nav-links">
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#skills" class="nav-link">Skills</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="nav-controls">
+          <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" aria-pressed="false">
+            <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="4"></circle>
+              <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path>
+            </svg>
+            <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </button>
+
+          <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+        <span class="scroll-ruler" id="scroll-ruler" aria-hidden="true"></span>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- ============ HERO ============ -->
+      <section class="hero container" id="top">
+        <div class="hero__frame blueprint-frame">
+          <p class="eyebrow hero__eyebrow">Sheet 01 — Introduction</p>
+          <h1 class="hero__title">Your Name</h1>
+          <p class="hero__role mono text-muted" style="font-size: var(--fs-md); margin-top: -0.5rem; margin-bottom: var(--sp-md);">Your Title</p>
+          <p class="hero__lede">
+            Your introduction here. Briefly describe who you are, what you do,
+            and the kind of work you're looking for.
+          </p>
+          <div class="hero__actions">
+            <a href="#projects" class="btn btn-primary">View the work</a>
+            <a href="#contact" class="btn btn-outline">Start a project</a>
+          </div>
+
+          <dl class="hero__coords">
+            <div class="coord">
+              <dt>Based in</dt>
+              <dd>Your city</dd>
+            </div>
+            <div class="coord">
+              <dt>Focus</dt>
+              <dd>Your focus area</dd>
+            </div>
+            <div class="coord">
+              <dt>Available</dt>
+              <dd>Your availability</dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="hero__visual blueprint-frame">
+          <img
+            class="hero__photo"
+            src="images/profile-placeholder.svg"
+            alt="Your profile photo — replace this file with your own photo"
+            width="420"
+            height="420"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+      </section>
+
+      <!-- ============ ABOUT ============ -->
+      <section class="section container" id="about">
+        <div class="section-title">
+          <h2>About</h2>
+          <span class="sheet-number mono">Sheet 02</span>
+        </div>
+
+        <div class="about-grid">
+          <div class="reveal">
+            <p>
+              Your bio goes here. Share your background, experience, and what
+              drives your work.
+            </p>
+          </div>
+
+          <dl class="specs-panel reveal">
+            <div class="specs-row">
+              <dt>Role</dt>
+              <dd>Your role</dd>
+            </div>
+            <div class="specs-row">
+              <dt>Experience</dt>
+              <dd>X years</dd>
+            </div>
+            <div class="specs-row">
+              <dt>Stack</dt>
+              <dd>Your primary stack</dd>
+            </div>
+            <div class="specs-row">
+              <dt>Prior</dt>
+              <dd>Previous company</dd>
+            </div>
+            <div class="specs-row">
+              <dt>Education</dt>
+              <dd>Your degree</dd>
+            </div>
+            <div class="specs-row">
+              <dt>Interests</dt>
+              <dd>Your interests</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <!-- ============ SKILLS ============ -->
+      <section class="section container" id="skills">
+        <div class="section-title">
+          <h2>Skills</h2>
+          <span class="sheet-number mono">Sheet 03</span>
+        </div>
+
+        <div class="skills-grid">
+          <article class="skill-card reveal" style="--level: 0;">
+            <div class="skill-card__head">
+              <span class="skill-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+              </span>
+              <span class="skill-card__level">—</span>
+            </div>
+            <h3>Skill Name</h3>
+            <p class="text-muted" style="font-size: var(--fs-sm);">Add a short description of this skill.</p>
+            <div class="meter"><div class="meter__fill"></div></div>
+          </article>
+
+          <article class="skill-card reveal" style="--level: 0;">
+            <div class="skill-card__head">
+              <span class="skill-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 7h-9M14 17H5"></path><circle cx="17" cy="17" r="3"></circle><circle cx="7" cy="7" r="3"></circle></svg>
+              </span>
+              <span class="skill-card__level">—</span>
+            </div>
+            <h3>Skill Name</h3>
+            <p class="text-muted" style="font-size: var(--fs-sm);">Add a short description of this skill.</p>
+            <div class="meter"><div class="meter__fill"></div></div>
+          </article>
+
+          <article class="skill-card reveal" style="--level: 0;">
+            <div class="skill-card__head">
+              <span class="skill-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4M12 8h.01"></path></svg>
+              </span>
+              <span class="skill-card__level">—</span>
+            </div>
+            <h3>Skill Name</h3>
+            <p class="text-muted" style="font-size: var(--fs-sm);">Add a short description of this skill.</p>
+            <div class="meter"><div class="meter__fill"></div></div>
+          </article>
+
+          <article class="skill-card reveal" style="--level: 0;">
+            <div class="skill-card__head">
+              <span class="skill-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M3 9h18M9 21V9"></path></svg>
+              </span>
+              <span class="skill-card__level">—</span>
+            </div>
+            <h3>Skill Name</h3>
+            <p class="text-muted" style="font-size: var(--fs-sm);">Add a short description of this skill.</p>
+            <div class="meter"><div class="meter__fill"></div></div>
+          </article>
+
+          <article class="skill-card reveal" style="--level: 0;">
+            <div class="skill-card__head">
+              <span class="skill-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+              </span>
+              <span class="skill-card__level">—</span>
+            </div>
+            <h3>Skill Name</h3>
+            <p class="text-muted" style="font-size: var(--fs-sm);">Add a short description of this skill.</p>
+            <div class="meter"><div class="meter__fill"></div></div>
+          </article>
+
+          <article class="skill-card reveal" style="--level: 0;">
+            <div class="skill-card__head">
+              <span class="skill-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20v-6M6 20V10M18 20V4"></path></svg>
+              </span>
+              <span class="skill-card__level">—</span>
+            </div>
+            <h3>Skill Name</h3>
+            <p class="text-muted" style="font-size: var(--fs-sm);">Add a short description of this skill.</p>
+            <div class="meter"><div class="meter__fill"></div></div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ============ PROJECTS ============ -->
+      <section class="section container" id="projects">
+        <div class="section-title">
+          <h2>Projects</h2>
+          <span class="sheet-number mono">Sheet 04</span>
+        </div>
+
+        <div class="projects-grid">
+          <article class="project-card reveal">
+            <div class="project-card__media" aria-hidden="true">
+              <svg viewBox="0 0 400 250" width="100%" height="100%" preserveAspectRatio="xMidYMid slice">
+                <rect width="400" height="250" fill="var(--color-primary)" />
+                <polyline points="20,200 90,140 160,170 230,90 300,120 380,50" fill="none" stroke="var(--color-accent)" stroke-width="3" />
+                <circle cx="230" cy="90" r="5" fill="var(--color-accent)" />
+              </svg>
+            </div>
+            <div class="project-card__body">
+              <h3>Project Title</h3>
+              <p class="project-card__desc">Project description goes here. Explain what the project does and the problem it solves.</p>
+              <div class="project-card__tags">
+                <span class="tag">Tag</span>
+                <span class="tag">Tag</span>
+                <span class="tag">Tag</span>
+              </div>
+              <div class="project-card__links">
+                <a href="#" class="link-btn">
+                  <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path></svg>
+                  Live demo
+                </a>
+                <a href="#" class="link-btn">
+                  <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                  Source
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-card__media" aria-hidden="true">
+              <svg viewBox="0 0 400 250" width="100%" height="100%" preserveAspectRatio="xMidYMid slice">
+                <rect width="400" height="250" fill="var(--color-secondary)" />
+                <rect x="40" y="60" width="70" height="130" fill="var(--color-accent)" opacity="0.85" />
+                <rect x="130" y="100" width="70" height="90" fill="var(--color-bg)" opacity="0.9" />
+                <rect x="220" y="40" width="70" height="150" fill="var(--color-accent)" opacity="0.6" />
+                <rect x="310" y="80" width="60" height="110" fill="var(--color-bg)" opacity="0.7" />
+              </svg>
+            </div>
+            <div class="project-card__body">
+              <h3>Project Title</h3>
+              <p class="project-card__desc">Project description goes here. Explain what the project does and the problem it solves.</p>
+              <div class="project-card__tags">
+                <span class="tag">Tag</span>
+                <span class="tag">Tag</span>
+                <span class="tag">Tag</span>
+              </div>
+              <div class="project-card__links">
+                <a href="#" class="link-btn">
+                  <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path></svg>
+                  Live demo
+                </a>
+                <a href="#" class="link-btn">
+                  <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                  Source
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-card__media" aria-hidden="true">
+              <svg viewBox="0 0 400 250" width="100%" height="100%" preserveAspectRatio="xMidYMid slice">
+                <rect width="400" height="250" fill="var(--color-primary)" />
+                <circle cx="200" cy="125" r="70" fill="none" stroke="var(--color-accent)" stroke-width="3" />
+                <circle cx="200" cy="125" r="45" fill="none" stroke="var(--color-bg)" stroke-width="2" opacity="0.6" />
+                <line x1="200" y1="55" x2="200" y2="195" stroke="var(--color-accent)" stroke-width="1" />
+                <line x1="130" y1="125" x2="270" y2="125" stroke="var(--color-accent)" stroke-width="1" />
+              </svg>
+            </div>
+            <div class="project-card__body">
+              <h3>Project Title</h3>
+              <p class="project-card__desc">Project description goes here. Explain what the project does and the problem it solves.</p>
+              <div class="project-card__tags">
+                <span class="tag">Tag</span>
+                <span class="tag">Tag</span>
+                <span class="tag">Tag</span>
+              </div>
+              <div class="project-card__links">
+                <a href="#" class="link-btn">
+                  <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path></svg>
+                  Live demo
+                </a>
+                <a href="#" class="link-btn">
+                  <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                  Source
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ============ CONTACT ============ -->
+      <section class="section container" id="contact">
+        <div class="section-title">
+          <h2>Contact</h2>
+          <span class="sheet-number mono">Sheet 05</span>
+        </div>
+
+        <div class="contact-grid">
+          <form class="contact-form reveal" id="contact-form" novalidate>
+            <div class="form-row two-up">
+              <div class="form-row">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" autocomplete="name" required />
+              </div>
+              <div class="form-row">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" autocomplete="email" required />
+              </div>
+            </div>
+            <div class="form-row">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" required />
+            </div>
+            <div class="form-row">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" required></textarea>
+            </div>
+            <div class="btn-group">
+              <button type="submit" class="btn btn-primary">Send message</button>
+            </div>
+            <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+          </form>
+
+          <div class="contact-info reveal">
+            <div class="contact-info__item">
+              <span class="contact-info__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z" opacity="0"></path><path d="M22 6 12 13 2 6"></path><rect x="2" y="4" width="20" height="16" rx="2"></rect></svg>
+              </span>
+              <div>
+                <p class="text-muted mono" style="font-size: var(--fs-xs);">EMAIL</p>
+                <p>your.email@example.com</p>
+              </div>
+            </div>
+            <div class="contact-info__item">
+              <span class="contact-info__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              </span>
+              <div>
+                <p class="text-muted mono" style="font-size: var(--fs-xs);">LOCATION</p>
+                <p>Your city, Your country</p>
+              </div>
+            </div>
+            <div class="contact-info__item">
+              <span class="contact-info__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
+              </span>
+              <div>
+                <p class="text-muted mono" style="font-size: var(--fs-xs);">RESPONSE TIME</p>
+                <p>Add your typical response time</p>
+              </div>
+            </div>
+
+            <div class="social-links">
+              <a href="#" class="social-link" aria-label="GitHub">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+              </a>
+              <a href="#" class="social-link" aria-label="LinkedIn">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+              </a>
+              <a href="#" class="social-link" aria-label="X / Twitter">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h4l-8.5 9.7L23 22h-6.9l-5.4-6.6L4.4 22H0l9-10.3L1 2h7l4.9 6z"></path></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <p class="footer-note">© 2026 Your Name. Built with HTML, CSS &amp; vanilla JS.</p>
+        <a href="#top" class="back-to-top">
+          Back to top
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"></path></svg>
+        </a>
+      </div>
+    </footer>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

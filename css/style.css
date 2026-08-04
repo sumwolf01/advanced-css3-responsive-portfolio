@@ -1,0 +1,200 @@
+/* ==========================================================================
+   3. GLOBAL STYLES
+   ========================================================================== */
+
+html {
+  overflow-x: clip;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: var(--fs-base);
+  transition: var(--transition-theme);
+  overflow-x: clip;
+  /* Faint drafting-paper grid, visible on both themes via variable line color */
+  background-image:
+    linear-gradient(var(--color-grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--color-grid-line) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+/* Fallback for browsers without overflow: clip support (Safari < 16, older Firefox).
+   Note: overflow: hidden on html/body can disable position: sticky descendants in
+   some engines, so it is used only as a last-resort fallback, not the default. */
+@supports not (overflow-x: clip) {
+  html, body {
+    overflow-x: hidden;
+  }
+}
+
+::selection {
+  background-color: var(--color-accent);
+  color: var(--color-inverse-text);
+}
+
+/* Visible keyboard focus everywhere */
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+  border-radius: var(--radius-sm);
+}
+
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--sp-md);
+}
+
+/* ==========================================================================
+   4. TYPOGRAPHY
+   ========================================================================== */
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: 1.08;
+  letter-spacing: -0.01em;
+  color: var(--color-primary);
+}
+
+h1 { font-size: var(--fs-2xl); }
+h2 { font-size: var(--fs-xl); }
+h3 { font-size: var(--fs-lg); }
+h4 { font-size: var(--fs-md); }
+
+p {
+  color: var(--color-text);
+  max-width: 62ch;
+}
+
+.text-muted { color: var(--color-text-muted); }
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2xs);
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-secondary);
+}
+
+.eyebrow::before {
+  content: '';
+  width: 18px;
+  height: var(--border-w);
+  background: var(--color-accent);
+  display: inline-block;
+}
+
+.section-title {
+  display: flex;
+  align-items: baseline;
+  gap: var(--sp-sm);
+  flex-wrap: wrap;
+  margin-block-end: var(--sp-lg);
+}
+
+.section-title .sheet-number {
+  font-family: var(--font-mono);
+  font-size: var(--fs-sm);
+  color: var(--color-text-muted);
+  border: var(--border-w) solid var(--color-border);
+  padding: 0.15em 0.6em;
+  border-radius: var(--radius-sm);
+}
+
+/* ==========================================================================
+   7. UTILITIES
+   ========================================================================== */
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: var(--sp-sm);
+  background: var(--color-primary);
+  color: var(--color-bg);
+  padding: var(--sp-2xs) var(--sp-sm);
+  z-index: 1000;
+  border-radius: var(--radius-sm);
+  transition: top var(--transition-fast);
+}
+
+.skip-link:focus {
+  top: var(--sp-sm);
+}
+
+.mono { font-family: var(--font-mono); }
+
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s var(--ease-drafting), transform 0.7s var(--ease-drafting);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* ==========================================================================
+   9. ANIMATIONS
+   ========================================================================== */
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slide-up {
+  from { opacity: 0; transform: translateY(32px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes draw-line {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.35; }
+}
+
+.hero__eyebrow,
+.hero__title,
+.hero__lede,
+.hero__actions {
+  animation: slide-up 0.8s var(--ease-drafting) both;
+}
+
+.hero__eyebrow { animation-delay: 0.05s; }
+.hero__title { animation-delay: 0.15s; }
+.hero__lede { animation-delay: 0.28s; }
+.hero__actions { animation-delay: 0.4s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__eyebrow, .hero__title, .hero__lede, .hero__actions {
+    animation: none;
+  }
+}
